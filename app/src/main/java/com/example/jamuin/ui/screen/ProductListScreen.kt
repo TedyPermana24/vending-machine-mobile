@@ -230,26 +230,7 @@ fun ProductCard(
                         fontWeight = FontWeight.Bold
                     )
                     
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(
-                            Icons.Default.List, // Changed from Inventory to List
-                            contentDescription = null,
-                            modifier = Modifier.size(16.dp),
-                            tint = if (product.stok > 0) 
-                                MaterialTheme.colorScheme.primary 
-                            else 
-                                MaterialTheme.colorScheme.error
-                        )
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text(
-                            "Stok: ${product.stok}",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = if (product.stok > 0) 
-                                MaterialTheme.colorScheme.onSurfaceVariant 
-                            else 
-                                MaterialTheme.colorScheme.error
-                        )
-                    }
+
                 }
             }
         }
